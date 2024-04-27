@@ -14,7 +14,7 @@ GET:
 - /prd/getAllPrd/{pageNo} (Get All Product from Database with Pagination)
 
 PUT:
--/cus/upd/{id} (Update Customer Details by ID)
+- /cus/upd/{id} (Update Customer Details by ID)
 
 POST:
 - cus/add (Add New Customer)
