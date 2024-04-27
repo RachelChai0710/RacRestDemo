@@ -1,5 +1,6 @@
 # RacRestDemo
-This is a spring boot application with REST API
+This project is a spring boot application with REST API.
+Integrated with [FakeStoreAPI](https://github.com/keikaavousi/fake-store-api).
 
 ## Resource
 There are 2 main resources in this project:
