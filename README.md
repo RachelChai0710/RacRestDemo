@@ -1,6 +1,7 @@
 # RacRestDemo
 This project is a spring boot application with REST API.
 Integrated with [FakeStoreAPI](https://github.com/keikaavousi/fake-store-api).
+Postman Collection to test: [Postman Collection](https://github.com/RachelChai0710/RacRestDemo/blob/main/Rac%20Rest%20Demo.postman_collection.json)
 
 ## Resource
 There are 2 main resources in this project:
