@@ -14,6 +14,7 @@ import com.rac.rest.demo.repository.CustomerRepository;
  * Service class for managing customer-related operations.
  */
 @Service
+@Transactional
 public class CustomerService{
 
 	/** Customer Repository */
@@ -28,7 +29,6 @@ public class CustomerService{
 	 * Retrieves all customers from the database.
 	 * @return List of all customers.
 	 */
-	@Transactional(propagation=Propagation.REQUIRED)
 	public List<Customer> findAll() {		
 		return  customerRepository.findAll();
 	}
@@ -38,7 +38,6 @@ public class CustomerService{
 	 * @param id The ID of the customer to retrieve.
 	 * @return The customer if found, otherwise null.
 	 */
-	@Transactional(propagation=Propagation.REQUIRED)
 	public Customer findById(long id) {
 		return customerRepository.findById((long)id).orElse(null);
 	}
@@ -49,7 +48,6 @@ public class CustomerService{
 	 * @return The added customer.
 	 * @throws Exception If an error occurs during the addition process.
 	 */
-	@Transactional(propagation=Propagation.REQUIRED)
 	public Customer add(Customer cus) throws Exception {
 		Address adr = cus.getAddress();
 		
@@ -65,7 +63,6 @@ public class CustomerService{
 	 * @return The updated customer.
 	 * @throws Exception If an error occurs during the update process.
 	 */
-	@Transactional(propagation=Propagation.REQUIRED)
 	public Customer update(Customer cus) throws Exception {
 		Address adr = cus.getAddress();
 		
@@ -79,7 +76,6 @@ public class CustomerService{
 	 * Deletes a customer from the database.
 	 * @param cus The customer to delete.
 	 */
-	@Transactional(propagation=Propagation.REQUIRED)
 	public void delete(Customer cus) {
 		Address adr = cus.getAddress();
 		customerRepository.delete(cus);

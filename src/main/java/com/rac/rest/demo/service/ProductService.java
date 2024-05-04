@@ -16,6 +16,7 @@ import com.rac.rest.demo.repository.ProductRepository;
  * Service class for managing product-related operations.
  */
 @Service
+@Transactional
 public class ProductService {
 	
 	/** Product Repository */
@@ -27,7 +28,6 @@ public class ProductService {
 	 * @param prds The list of products to add.
 	 * @return The list of added products.
 	 */
-	@Transactional(propagation=Propagation.REQUIRED)
 	public List<Product> addAll(List<Product> prds){
 		return prdRepository.saveAll(prds);
 	}
@@ -37,7 +37,6 @@ public class ProductService {
 	 * @param pageNo The page number to retrieve.
 	 * @return The page of products.
 	 */
-	@Transactional(propagation=Propagation.REQUIRED)
 	public Page<Product> findAll(int pageNo){
 		return prdRepository.findAll(PageRequest.of(pageNo, 10));
 	}
