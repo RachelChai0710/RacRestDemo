@@ -2,6 +2,7 @@ package com.rac.rest.demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.rac.rest.demo.data.Address;
 import com.rac.rest.demo.repository.AddressRepository;
@@ -10,6 +11,7 @@ import com.rac.rest.demo.repository.AddressRepository;
  * Service class for managing address-related operations.
  */
 @Service
+@Transactional
 public class AddressService {
 	
 	/** Address Repository */
