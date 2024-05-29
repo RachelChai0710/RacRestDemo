@@ -10,13 +10,13 @@ There are 2 main resources in this project:
 
 ## All available routes
 GET:
-- /cus/getAll (Get All Customers)
-- /cus/get/{id} (Get Customer by ID)
-- /prd/getNAddAllPrd (Get Products from 3rd Party API and Store to Database)
-- /prd/getAllPrd/{pageNo} (Get All Product from Database with Pagination)
+- cus/getAll (Get All Customers)
+- cus/get/{id} (Get Customer by ID)
+- prd/getNAddAllPrd (Get Products from 3rd Party API and Store to Database)
+- prd/getAllPrd/{pageNo} (Get All Product from Database with Pagination)
 
 PUT:
-- /cus/upd/{id} (Update Customer Details by ID)
+- cus/upd/{id} (Update Customer Details by ID)
 
 POST:
 - cus/add (Add New Customer)
@@ -36,5 +36,5 @@ Request Body for Add and Update Customer:
 ```
 
 DELETE:
-- /cus/delete/{id} (Delete Customer by ID)
+- cus/delete/{id} (Delete Customer by ID)
   
